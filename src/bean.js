@@ -297,7 +297,7 @@
       overOut.test(type) && (result.relatedTarget = e.relatedTarget || e[(type == 'mouseover' ? 'from' : 'to') + 'Element']);
     }
     for (var k in e) {
-      if (!(k in result)) {
+      if (!(k in result) && k !== 'layerX' && k != 'layerY') {
         result[k] = e[k];
       }
     }
